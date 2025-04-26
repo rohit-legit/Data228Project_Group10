@@ -1,0 +1,14 @@
+Date,Sentiment,Count
+2020-01,neutral,60
+2025-01,negative,376
+2025-01,neutral,700
+2025-01,positive,410
+2025-02,negative,1459
+2025-02,neutral,2915
+2025-02,positive,1665
+2025-03,negative,1855
+2025-03,neutral,3876
+2025-03,positive,2170
+2025-04,negative,1524
+2025-04,neutral,3303
+2025-04,positive,1847
