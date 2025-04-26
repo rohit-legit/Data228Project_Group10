@@ -1,48 +1,4 @@
-# news_producer.py
-
-# import requests
-# import json
-# import time
-# import os
-# import random
-# from kafka import KafkaProducer
-# from dotenv import load_dotenv
-# import datetime
-
-# load_dotenv()
-# API_KEY = os.getenv("NEWS_API_KEY")
-# producer = KafkaProducer(bootstrap_servers='localhost:9092', value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-
-# # Keywords to search for
-# keywords = ["stocks", "Tesla", "Apple", "finance", "investment", "market"]
-
-# while True:
-#     today = datetime.date.today()
-#     from_date = (today - datetime.timedelta(days=30)).strftime('%Y-%m-%d')
-
-#     for keyword in keywords:
-#         url = f'https://newsapi.org/v2/everything?q={keyword}&from={from_date}&sortBy=publishedAt&pageSize=100&apiKey={API_KEY}'
-#         response = requests.get(url)
-#         if response.status_code == 200:
-#             articles = response.json().get("articles", [])
-#             for article in articles:
-#                 # 🌟 Randomly assign a fake publishedAt date in the last 30 days
-#                 random_days_back = random.randint(0, 365)
-#                 fake_date = (today - datetime.timedelta(days=random_days_back)).strftime('%Y-%m-%dT%H:%M:%SZ')
-
-#                 msg = {
-#                     "title": article.get("title"),
-#                     "content": article.get("content") or "",
-#                     "publishedAt": fake_date
-#                 }
-#                 producer.send("newsdata", msg)
-#                 print(f"Sent ({keyword}):", msg["title"], "| Fake Date:", fake_date)
-#         else:
-#             print(f"Failed to fetch for {keyword}: {response.status_code}")
-
-#     time.sleep(30)  # Fetch every 30 seconds
-
-# news_producer.py (Offline Kaggle Dataset Version)
+# news_producer.py 
 
 import pandas as pd
 import json
